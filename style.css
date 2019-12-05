@@ -81,6 +81,7 @@ header {
 }
 
 header h1 {
+  font-size: 2.7em;
   text-decoration: overline underline;
   color: white;
   text-align: center;
@@ -101,10 +102,11 @@ article {
 article .welcomeMessage {
   padding: 0 30px;
   position: relative;
-  top: 45%;
-  border: 2px outset black;
+  top: 20%;
+  border-radius: 10px;
   background: black;
   color: white;
+  font-size: 1.2em;
 }
 
 article .welcomeMessage h2 {
@@ -176,6 +178,8 @@ form {
 }
 
 form button {
+  position: relative;
+  bottom: 30%;
   height: 50px;
   width: 140px;
   background-color: red;

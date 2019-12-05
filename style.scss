@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+@mixin bg {
+  background: url(https://images4.alphacoders.com/988/thumb-1920-988128.jpg) no-repeat center center fixed;
+}
+
+@mixin font {
+  font-family: "Bebas Neue", cursive;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  max-width: 414px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  @include bg();
+  @include font();
+}
+
+nav {
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+article {
+  grid-row: 3;
+  grid-column: 1 / -1;
+}
+
+footer {
+  grid-row: -1;
+  grid-column: 1 / -1;
+}
+
+// Styling Properties
+
+nav {
+  background-color: black;
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    li {
+      list-style: none;
+      padding: 2px;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+header {
+  background-color: black;
+  h1 {
+    text-decoration: overline underline;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 8%;
+  }
+}
+
+article {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  .welcomeMessage {
+    padding: 0 30px;
+    position: relative;
+    top: 45%;
+    border: 2px outset black;
+    background: black;
+    color: white;
+    h2 {
+      text-decoration: overline;
+    }
+    p {
+      text-align: left;
+    }
+    p:nth-of-type(3) {
+      text-decoration: underline;
+    }
+  }
+
+  aside {
+    position: absolute;
+    bottom: 13%;
+    left: 0;
+    right: 0;
+    section {
+      margin: 0 auto;
+      p {
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-style: italic;
+        font-weight: 700;
+        text-shadow: 3px 2px 4px black;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  small {
+    color: white;
+    text-align: center;
+    padding: 2px;
+  }
+  small:nth-of-type(1) {
+    font-size: 1.1em;
+  }
+  small:nth-of-type(2) {
+    font-size: 1em;
+  }
+}
+
+form {
+  margin: 0 auto;
+  grid-row: 7;
+  grid-column: 1 / -1;
+
+  button {
+    height: 50px;
+    width: 140px;
+    background-color: red;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 1.6em;
+    @include font();
+  }
+}
